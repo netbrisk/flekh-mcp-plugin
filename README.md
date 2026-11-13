@@ -45,10 +45,13 @@ What an agent may approve, schedule or publish is set per project in Flekh (Agen
 | `plugins/flekh/skills/video-review/SKILL.md` | The review loop skill |
 | `server.json` | Entry for the official MCP Registry (`io.github.netbrisk/flekh`) |
 | `.github/workflows/publish-mcp.yml` | Publishes `server.json` to the registry (GitHub OIDC) when it changes on `main` |
+| `packages/review` | npm package `@flekh/review`: `npx @flekh/review setup` (connect Claude Code, Cursor, Codex) and `upload` (local files, used by the connector's `start_upload(path)`) |
 
 ## Release
 
 - Plugin: bump `version` in `plugins/flekh/.claude-plugin/plugin.json`, push to `main`.
+- npm package: in `packages/review`, bump `version` in `package.json`, `npm install`, `npm test`, then
+  `npm publish` (needs the `@flekh` npm org; 2FA: `--auth-type=web`).
 - MCP Registry: bump `version` in `server.json`, push to `main` (the workflow publishes it; the registry refuses a
   version it already has).
 

@@ -1,0 +1,48 @@
+{
+  "name": "@flekh/review",
+  "version": "0.2.0",
+  "description": "Connect Flekh to Claude Code, Cursor and Codex, and upload files from your computer to Flekh from any AI agent with a terminal",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "flekh-review": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://help.flekh.com/en/articles/connect-claude-chatgpt-or-cursor-to-flekh-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netbrisk/flekh-mcp-plugin.git",
+    "directory": "packages/review"
+  },
+  "bugs": {
+    "url": "https://github.com/netbrisk/flekh-mcp-plugin/issues"
+  },
+  "keywords": [
+    "flekh",
+    "upload",
+    "mcp",
+    "claude",
+    "review",
+    "cursor",
+    "codex"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run --root ."
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "typescript": "5.6.3",
+    "vitest": "2.1.8"
+  }
+}
