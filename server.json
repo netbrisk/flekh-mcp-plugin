@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.netbrisk/flekh",
+  "description": "Video review and approval for agents: upload renders, read frame-accurate feedback, ship versions.",
+  "repository": {
+    "url": "https://github.com/netbrisk/flekh-mcp-plugin",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://www.flekh.com/product/agent-mode",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.flekh.com/mcp"
+    }
+  ]
+}

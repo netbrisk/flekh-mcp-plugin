@@ -1,0 +1,18 @@
+{
+  "name": "flekh",
+  "owner": {
+    "name": "Flekh",
+    "email": "shashank@flekh.com",
+    "url": "https://www.flekh.com"
+  },
+  "metadata": {
+    "description": "Flekh (flekh.com): video review, approval and publishing for teams, agencies and their AI agents."
+  },
+  "plugins": [
+    {
+      "name": "flekh",
+      "source": "./plugins/flekh",
+      "description": "Put your renders in front of people on Flekh: upload a video or image, share the link, read time-coded comments and drawings, upload the next version and close the threads until it is approved."
+    }
+  ]
+}

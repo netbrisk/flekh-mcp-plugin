@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "flekh": {
+      "type": "http",
+      "url": "https://api.flekh.com/mcp"
+    }
+  }
+}

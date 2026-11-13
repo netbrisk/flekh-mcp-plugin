@@ -1,0 +1,35 @@
+{
+  "name": "flekh",
+  "displayName": "Flekh",
+  "description": "Flekh is video review, approval and publishing for teams, agencies and their AI agents. Your agent uploads a render to a Flekh project and shares the link; clients and teammates comment on the exact frame, draw on it and attach references; the agent reads that feedback, makes the changes, uploads the next version and replies in the thread until the work is approved and, if the project allows it, scheduled or published.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Flekh",
+    "email": "shashank@flekh.com",
+    "url": "https://www.flekh.com"
+  },
+  "homepage": "https://www.flekh.com/product/agent-mode",
+  "repository": "https://github.com/netbrisk/flekh-mcp-plugin",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "video-review",
+    "approval",
+    "feedback",
+    "client-review",
+    "versions",
+    "publishing",
+    "social-media",
+    "agency",
+    "remotion",
+    "hyperframes",
+    "premiere",
+    "davinci-resolve",
+    "mcp"
+  ],
+  "icon": "./icon.png",
+  "documentationUrl": "https://help.flekh.com/en/articles/connect-claude-chatgpt-or-cursor-to-flekh-mcp",
+  "supportUrl": "https://www.flekh.com/contact",
+  "privacyPolicyUrl": "https://www.flekh.com/privacy-policy",
+  "termsOfServiceUrl": "https://www.flekh.com/terms-of-use"
+}
