@@ -36,6 +36,10 @@ locally once.
    - A re-render of something already in Flekh is a **new version of the same file**: pass its
      `asset_id`, and `notes` saying what changed ("v3: shorter intro, logo 20% smaller").
      Never upload it as a separate new file.
+   - Source files (Claude Code, local paths only): pass `attach` to `start_upload` with the
+     project files behind the render (e.g. a zip of the composition); the command attaches them
+     to the new version. For a version already in Flekh, call `attach_files` and run its command.
+     Up to 10 files per version.
 3. **Share the link** with the user and stop. People review in Flekh at their own pace.
 4. **Read the feedback** when the user says it is in (or asks): `get_comments`. Each comment
    has a time or range, maybe a drawing on the frame and attachments; read all of it.

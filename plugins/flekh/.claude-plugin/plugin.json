@@ -2,7 +2,7 @@
   "name": "flekh",
   "displayName": "Flekh",
   "description": "Flekh is video review, approval and publishing for teams, agencies and their AI agents. Your agent uploads a render to a Flekh project and shares the link; clients and teammates comment on the exact frame, draw on it and attach references; the agent reads that feedback, makes the changes, uploads the next version and replies in the thread until the work is approved and, if the project allows it, scheduled or published.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Flekh",
     "email": "shashank@flekh.com",

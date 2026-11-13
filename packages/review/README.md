@@ -49,6 +49,30 @@ prints the file's link. Big files are fine (up to your plan's file limit).
 - **Options:** `--api <url>` (or `FLEKH_API`) for a non-production Flekh, `--json` for one line of JSON.
 - **Exit codes:** 0 uploaded · 1 refused by Flekh (message says why) · 2 network or storage problem (run again to resume).
 
+## Attach files to a version
+
+Source files, a zip of the project, notes: up to 10 files on each version, shown with it in Flekh. Ask your AI:
+
+> upload ~/renders/cut_v3.mp4 as the next version of Summer teaser, and attach ~/renders/comp.zip
+
+`start_upload(path, attach=[…])` gives one command that uploads the version, then attaches the files with the same ticket:
+
+```bash
+npx -y @flekh/review upload ~/renders/cut_v3.mp4 --ticket rvw_… --attach ~/renders/comp.zip --attach ~/notes.pdf
+```
+
+For a version already in Flekh, the connector's `attach_files` gives an attach-only ticket:
+
+```bash
+npx -y @flekh/review attach ~/renders/comp.zip ~/notes.pdf --ticket rvw_…
+```
+
+Each file goes straight to Flekh's storage (retried), then they're added to the version together and it prints
+`✓ 2 files → <link>`. Every file is checked before anything is sent (missing file or more than 10: nothing uploaded).
+Per-file size follows your plan's file limit. If the version uploaded but attaching failed, the version stays and
+the message says so; ask the AI to call `attach_files` for it. Same `--api`, `--json` and exit codes as upload.
+Claude Code (and other agents with a shell) only: chat apps can't read files on your computer.
+
 Needs Node 18 or newer. No dependencies.
 
 ## Develop
